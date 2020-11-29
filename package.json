@@ -1,0 +1,15 @@
+{
+  "name": "warehouse_analytics",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "redbluesquare",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "three": "^0.123.0"
+  }
+}
