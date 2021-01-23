@@ -9,52 +9,12 @@ var aisles = [{"x":60000, "y":0, "z":20000, "l":1200, "w":1000*50, "h":1400*7},
                 {"x":64000, "y":0, "z":20000, "l":1200, "w":1000*50, "h":1400*7},
                 {"x":68000, "y":0, "z":20000, "l":1200, "w":1000*50, "h":1400*7}];
 var locations = [
-    {
-      "location": "PAL1-01-001-01-01","x": 60000,"y": 0,"z": 20000,"l": 1200,"w": 1000,"h": 1400
-    },
-    {
-      "location": "PAL1-01-001-01-02","x": 60000,"y": 0,
-      "z": 21000,
-      "l": 1200,
-      "w": 1000,
-      "h": 1400
-    },
-    {
-      "location": "PAL1-01-001-01-03",
-      "x": 60000,
-      "y": 0,
-      "z": 22000,
-      "l": 1200,
-      "w": 1000,
-      "h": 1400
-    },
-    {
-      "location": "PAL1-01-001-03-01",
-      "x": 60000,
-      "y": 1400,
-      "z": 20000,
-      "l": 1200,
-      "w": 1000,
-      "h": 1400
-    },
-    {
-      "location": "PAL1-01-001-03-02",
-      "x": 60000,
-      "y": 1400,
-      "z": 21000,
-      "l": 1200,
-      "w": 1000,
-      "h": 1400
-    },
-    {
-      "location": "PAL1-01-001-03-03",
-      "x": 60000,
-      "y": 1400,
-      "z": 22000,
-      "l": 1200,
-      "w": 1000,
-      "h": 1400
-    },
+    {"location": "PAL1-01-001-01-01","x": 60000,"y": 0,"z": 20000,"l": 1200,"w": 1000,"h": 1400},
+    {"location": "PAL1-01-001-01-02","x": 60000,"y": 0,"z": 21000,"l": 1200,"w": 1000,"h": 1400},
+    {"location": "PAL1-01-001-01-03","x": 60000,"y": 0,"z": 22000,"l": 1200,"w": 1000,"h": 1400},
+    {"location": "PAL1-01-001-03-01","x": 60000,"y": 1400,"z": 20000,"l": 1200,"w": 1000,"h": 1400},
+    {"location": "PAL1-01-001-03-02","x": 60000,"y": 1400,"z": 21000,"l": 1200,"w": 1000,"h": 1400},
+    {"location": "PAL1-01-001-03-03","x": 60000,"y": 1400,"z": 22000,"l": 1200,"w": 1000,"h": 1400},
     {
       "location": "PAL1-01-001-05-01",
       "x": 60000,
@@ -539,7 +499,7 @@ animate();
 
 function init(){
     scene = new THREE.Scene();
-    camera = new THREE.PerspectiveCamera( 100, window.innerWidth / window.innerHeight, 0.1, 3000 );
+    camera = new THREE.PerspectiveCamera( 100, window.innerWidth / window.innerHeight, 0.1, 2000 );
     clock = new THREE.Clock();
     renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize( window.innerWidth, window.innerHeight );
@@ -587,7 +547,7 @@ function addpalletarea(){
                                                     wireframe: false});
         var mesh = new THREE.Mesh( geometry, material );
         mesh.position.x = ((locations[i].x-xmin)/scale);
-        mesh.position.y = ((locations[i].y-ymin)/scale)+locations[i].h/scale/2;
+        mesh.position.y = ((locations[i].y-ymin)/scale);
         mesh.position.z = -((locations[i].z-zmin)/scale);
         scene.add( mesh );
         const edgesGeometry = new THREE.EdgesGeometry( geometry );
