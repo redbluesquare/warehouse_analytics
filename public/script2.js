@@ -3,7 +3,6 @@ import  { FirstPersonControls }  from '/jsm/controls/FirstPersonControls.js';
 
 var xmin, ymin, zmin, xmax, ymax, zmax, lmax, wmax, hmax, x_range, y_range, z_range;
 var controls, clock, scene, camera, renderer, gravity = 9, ground = 14, forcey = 0;
-let text = "three.js";
 //Scale down the values by 100
 var scale = 100;
 var locations = [{"location": "PAL1-01-001-01-01","x": 60000,"y": 0,"z": 20000,"l": 1200,"w": 1000,"h": 1400,"orientation":4},
